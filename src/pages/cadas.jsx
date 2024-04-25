@@ -32,7 +32,7 @@ function App() {
                 username: '',
                 password: '',
             });
-            alert("Deu certo")
+            alert("Usuário cadastrado")
         } catch (error) {
             console.error('Erro ao criar Usuário:', error);
         }
