@@ -1,3 +1,4 @@
+import '../App.css'
 // Importa o módulo React do pacote react
 import React from 'react';
 // Importa o hook useNavigate do pacote react-router-dom
@@ -16,6 +17,10 @@ function home() {
     <div>
       {/* Título da página inicial */}
       <h1>Página Inicial</h1>      
+      <div>
+        <img src="\src\assets\nhoque-de-batata-doce.jpeg" alt="Nhoque de Batata Doce" />
+      </div>
+      <br />
       {/* Botão para navegar para a página About ao ser clicado */}
       <button onClick={handleClick}>Ir para Home</button>
     </div>

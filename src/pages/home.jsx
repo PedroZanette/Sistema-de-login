@@ -28,7 +28,7 @@ function App() {
   const handleLogin = async () => {
     try {
       const response = await logar(username, password);
-      alert(response);
+      alert("Usuário logado com sucesso");
       if (response == true) {
         irPara('/page');
       }
@@ -42,30 +42,34 @@ function App() {
   }
   return (
     <div >
-      <h1 className='title'>TrêsáNo login SyStem</h1>
+      <h1 className='title'>Frango do G login SyStem</h1>
       <form className='form-container'>
         <div className='form-group'>
-          <label>
-            Usuário:
+          <div class="group">
+            <svg stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="icon-1">
+              <path d="M7 17v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3Zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" stroke-linejoin="round" stroke-linecap="round"></path>
+            </svg>
             <input
+              class='input'
               type="text"
+              placeholder='Username'
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
-          </label>
+          </div>
           <br />
           <div class="group">
-            
-              <svg stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="icon">
-                <path d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" stroke-linejoin="round" stroke-linecap="round"></path>
-              </svg>
-              <input
+
+            <svg stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="icon">
+              <path d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" stroke-linejoin="round" stroke-linecap="round"></path>
+            </svg>
+            <input
               class='input'
               placeholder='Password'
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
           </div>
           <br /> <br />
           <button
